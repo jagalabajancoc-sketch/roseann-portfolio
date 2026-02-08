@@ -1060,7 +1060,7 @@ footer {
 
 .timeline-content:hover {
     border-left-color: var(--color-accent);
-    background: rgba(26,26,26,0.8);
+    background: rgba(248, 199, 242, 0.37);
     transform: translateX(10px);
 }
 
@@ -1153,3 +1153,4 @@ footer {
         font-size: 1.2rem;
     }
 }
+
