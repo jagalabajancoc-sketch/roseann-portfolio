@@ -866,10 +866,6 @@ footer {
         min-height: 100vh;
     }
 
-    .hero-text {
-        padding: 6rem 2rem 4rem;
-        background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.85) 100%);
-    }
 
     .hero-image {
         position: absolute;
@@ -1153,4 +1149,5 @@ footer {
         font-size: 1.2rem;
     }
 }
+
 
