@@ -96,3 +96,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Theme Toggle Functionality
+const initTheme = () => {
+    // Check for saved theme preference or default to 'dark'
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+};
+
+const updateThemeIcon = (theme) => {
+    const icon = document.querySelector('.theme-toggle-icon');
+    if (icon) {
+        icon.textContent = theme === 'light' ? '☀️' : '🌙';
+    }
+};
+
+const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+};
+
+// Initialize theme on page load
+initTheme();
+
+// Add click event to theme toggle button
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
